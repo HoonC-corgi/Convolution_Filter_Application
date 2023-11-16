@@ -37,7 +37,7 @@ def on_filter_select(event):
 original_image = cv2.cvtColor(cv2.imread('./assets/example.png'), cv2.COLOR_BGR2RGB)
 gray_image = cv2.cvtColor(original_image, cv2.COLOR_BGR2GRAY)
 
-# Main window setup
+# 메인화 면
 window = tk.Tk()
 window.title("공간 필터링")
 
@@ -47,7 +47,7 @@ original_label = tk.Label(window, image=original_photo)
 original_label.image = original_photo
 original_label.pack()
 
-# 드롭다운 구성
+# 드롭다운 구
 filter_var = tk.StringVar(window)
 filters = ['3x3 mean', '5x5 mean', '3x3 median', '5x5 median', '3x3 laplacian']
 filter_dropdown = ttk.Combobox(window, textvariable=filter_var, values=filters)
